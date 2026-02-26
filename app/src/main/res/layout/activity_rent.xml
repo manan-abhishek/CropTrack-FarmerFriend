@@ -1,0 +1,322 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/scrollView"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/img_13">
+
+    <LinearLayout
+        android:id="@+id/linearLayoutRoot"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="#80000000">
+
+        <TextView
+            android:id="@+id/tvTitle"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Rent Farming Equipments"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#FFFFFF"
+            android:layout_marginBottom="20dp" />
+
+        <!-- Tractor -->
+        <LinearLayout
+            android:id="@+id/itemTractor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgTractor"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img"
+                android:contentDescription="Tractor" />
+
+            <TextView
+                android:id="@+id/tvTractorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Tractor"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Combine Harvester -->
+        <LinearLayout
+            android:id="@+id/itemCombine"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgCombine"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_1"
+                android:contentDescription="Combine Harvester" />
+
+            <TextView
+                android:id="@+id/tvCombineName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Combine Harvester"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Plough -->
+        <LinearLayout
+            android:id="@+id/itemPlough"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgPlough"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_2"
+                android:contentDescription="Plough" />
+
+            <TextView
+                android:id="@+id/tvPloughName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Plough"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Rotavator -->
+        <LinearLayout
+            android:id="@+id/itemRotavator"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgRotavator"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_3"
+                android:contentDescription="Rotavator" />
+
+            <TextView
+                android:id="@+id/tvRotavatorName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Rotavator"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Seeder -->
+        <LinearLayout
+            android:id="@+id/itemSeeder"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgSeeder"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_4"
+                android:contentDescription="Seeder" />
+
+            <TextView
+                android:id="@+id/tvSeederName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Seeder"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Sprayer -->
+        <LinearLayout
+            android:id="@+id/itemSprayer"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgSprayer"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_5"
+                android:contentDescription="Sprayer" />
+
+            <TextView
+                android:id="@+id/tvSprayerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Sprayer"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Baler -->
+        <LinearLayout
+            android:id="@+id/itemBaler"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgBaler"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_6"
+                android:contentDescription="Baler" />
+
+            <TextView
+                android:id="@+id/tvBalerName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Baler"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Irrigation System -->
+        <LinearLayout
+            android:id="@+id/itemIrrigation"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgIrrigation"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_7"
+                android:contentDescription="Irrigation System" />
+
+            <TextView
+                android:id="@+id/tvIrrigationName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Irrigation System"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- Mini Loader -->
+        <LinearLayout
+            android:id="@+id/itemMiniLoader"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:padding="12dp"
+            android:layout_marginBottom="12dp"
+            android:background="@android:color/transparent"
+            android:elevation="4dp"
+            android:clipToOutline="true">
+
+            <ImageView
+                android:id="@+id/imgMiniLoader"
+                android:layout_width="64dp"
+                android:layout_height="64dp"
+                android:src="@drawable/img_8"
+                android:contentDescription="Mini Loader" />
+
+            <TextView
+                android:id="@+id/tvMiniLoaderName"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Mini Loader"
+                android:textSize="18sp"
+                android:textStyle="bold"
+                android:textColor="#FFFFFF"
+            android:layout_gravity="center_vertical"
+            android:layout_marginStart="16dp" />
+        </LinearLayout>
+
+        <!-- My Bookings Button -->
+        <Button
+            android:id="@+id/btnMyBookings"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="My Bookings"
+            android:textSize="16sp"
+            android:textStyle="bold"
+            android:textColor="@android:color/white"
+            android:backgroundTint="#388E3C"
+            android:layout_marginTop="24dp"
+            android:layout_marginBottom="32dp"
+            android:padding="12dp" />
+
+    </LinearLayout>
+
+</ScrollView>

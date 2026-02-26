@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">क्रॉपट्रैक</string>
+
+    <!-- Login and SignUp page -->
+    <string name="Login">लॉगिन</string>
+    <string name="Signup">साइनअप</string>
+
+    <string name="signup_full_name">पूरा नाम</string>
+    <string name="signup_phone_number">फ़ोन नंबर</string>
+    <string name="signup_email">ईमेल</string>
+    <string name="signup_password">पासवर्ड</string>
+    <string name="signup_confirm_password">पासवर्ड की पुष्टि</string>
+    <string name="getOtp">ओटीपी प्राप्त करें</string>
+    <string name="signupWith">या साइनअप करें</string>
+    <string name="loginWith">या लॉगिन करें</string>
+    <string name="alreadyAcc">पहले से खाता है? यहाँ लॉगिन करें</string>
+    <string name="login_google">गूगल</string>
+    <string name="login_facebook">फेसबुक</string>
+    <string name="notAcc">क्या आपके पास खाता नहीं है? यहाँ साइनअप करें</string>
+
+    <string name="or">या</string>
+    <string name="ipErr">कृपया सभी आवश्यक विवरण भरें</string>
+    <string name="cnfErr">पासवर्ड और पुष्टि पासवर्ड समान होने चाहिए</string>
+
+    <!-- Main -->
+    <string name="home">होम</string>
+    <string name="climate">मौसम</string>
+    <string name="reel">रील</string>
+    <string name="rent">किराया</string>
+
+    <!-- Home -->
+    <string name="address">फगवाड़ा, पंजाब</string>
+    <string name="day">धूप</string>
+    <string name="addCrop">फसल जोड़ें</string>
+    <string name="cropprogress">फसल प्रगति</string>
+    <string name="soilTest">मिट्टी परीक्षण</string>
+    <string name="uploadImage">चित्र अपलोड करें</string>
+    <string name="feedback">प्रतिक्रिया</string>
+    <string name="explore">खोजें</string>
+
+    <!-- govtYojna -->
+    <string name="govtYojna">सरकारी योजना</string>
+    <string name="yojnaPara">प्रधान मंत्री किसान सम्मान निधि (पीएम-किसान) एक सरकारी पहल है जिसका उद्देश्य किसानों को आर्थिक सहायता प्रदान करना है। इस योजना के तहत, पात्र किसानों को प्रति वर्ष ₹6,000 तीन बराबर किश्तों में सीधे उनके बैंक खातों में मिलते हैं।
+
+यह पहल छोटे और सीमांत किसानों को वित्तीय सहायता प्रदान करके फसल की स्थिरता सुनिश्चित करने और उधारी पर निर्भरता कम करने में मदद करती है। यह राशि बीज, उर्वरक और अन्य आवश्यक कृषि सामग्रियों की खरीद में सहायता करती है।
+
+किसान पीएम-किसान के लिए ऑनलाइन या स्थानीय कृषि कार्यालयों के माध्यम से पंजीकरण कर सकते हैं। इस योजना ने ग्रामीण अर्थव्यवस्था को मजबूत करने और देश भर में कृषि परिवारों के जीवन स्तर में सुधार करने में महत्वपूर्ण भूमिका निभाई है।</string>
+
+    <!-- AddCrop -->
+    <string name="wheat">गेहूं</string>
+    <string name="pea">मटर</string>
+    <string name="onion">प्याज</string>
+
+    <!-- chooseCropLoc -->
+    <string name="chooseLoc">फसल का स्थान चुनें</string>
+    <string name="acre">एकड़ में क्षेत्रफल</string>
+    <string name="crop">फसल</string>
+    <string name="submit">सबमिट करें</string>
+
+    <!-- soil test -->
+    <string name="soilData">मिट्टी डेटा</string>
+    <string name="soilReport">मिट्टी रिपोर्ट</string>
+    <string name="download">डाउनलोड करें</string>
+
+
+<!--    abhishek-->
+    <string name="weather_matters_nwe_ve_got_the_details">मौसम महत्वपूर्ण है, हमारे पास विवरण हैं</string>
+    <string name="_00_00_c">00:00 ºC</string>
+    <string name="textview">पाठ दृश्य</string>
+    <string name="_0000_hpa">0000 hPa</string>
+    <string name="humidity">नमी</string>
+    <string name="_00_00">00:00</string>
+    <string name="sea">समुद्र</string>
+    <string name="sunset">सूर्यास्त</string>
+    <string name="sunrise">सूर्योदय</string>
+    <string name="condition">स्थिति</string>
+    <string name="sunny">धूप</string>
+    <string name="wind_speed">हवा की गति</string>
+    <string name="_0_00_m_s">0.00 मी/से</string>
+    <string name="_11_april_2025">11 अप्रैल 2025</string>
+    <string name="tuesday">मंगलवार</string>
+    <string name="city_name">शहर का नाम</string>
+    <string name="max_00_00_c">अधिकतम: 00:00ºC</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+
+</resources>

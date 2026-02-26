@@ -1,0 +1,86 @@
+<resources>
+    <string name="app_name">CropTrack</string>
+
+    <!--    Login and SignUp page-->
+    <string name="Login">LogIn</string>
+    <string name="Signup">SignUp</string>
+
+    <string name="signup_full_name">Full Name</string>
+    <string name="signup_phone_number">Phone Number</string>
+    <string name="signup_email">Email</string>
+    <string name="signup_password">Password</string>
+    <string name="signup_confirm_password">Confirm Password</string>
+    <string name="getOtp">Get OTP</string>
+    <string name="signupWith">or SignUp with</string>
+    <string name="loginWith">or LoginUp with</string>
+    <string name="alreadyAcc">Already have an account? Login here</string>
+    <string name="login_google">Google</string>
+    <string name="login_facebook">Facebook</string>
+    <string name="notAcc">Don\'t have an account? Sign up here</string>
+
+    <string name="or">or</string>
+    <string name="ipErr">Please fill all the reuired details</string>
+    <string name="cnfErr">Password and Confirm Password should be same</string>
+
+    <!--    Main-->
+    <string name="home">Home</string>
+    <string name="climate">Climate</string>
+    <string name="reel">Reel</string>
+    <string name="rent">Rent</string>
+
+    <!--    Home-->
+    <string name="address">Phagwara, Punjab</string>
+    <string name="day">Sunny</string>
+    <string name="addCrop">Add Crop</string>
+    <string name="cropprogress">Crop Progress</string>
+    <string name="soilTest">Soil Test</string>
+    <string name="uploadImage">Upload Image</string>
+    <string name="feedback">Feedback</string>
+    <string name="explore">Explore</string>
+
+    <!--    govtYojna-->
+    <string name="govtYojna">Government Yojna</string>
+    <string name="yojnaPara">Pradhan Mantri Kisan Samman Nidhi (PM-KISAN) is a government initiative launched to support farmers financially. Under this scheme, eligible farmers receive ₹6,000 annually in three equal installments, directly into their bank accounts.
+
+This initiative aims to provide financial assistance to small and marginal farmers to ensure crop sustainability and reduce their dependency on loans. The funds help in purchasing seeds, fertilizers, and other essential agricultural inputs.
+
+Farmers can register for PM-KISAN online or through local agriculture offices. The scheme has played a vital role in strengthening the rural economy and improving the livelihood of farming families across the country.</string>
+
+    <!--   AddCrop -->
+    <string name="wheat">Wheat</string>
+    <string name="pea">Pea</string>
+    <string name="onion">Onion</string>
+
+    <!--    chooseCropLoc-->
+    <string name="chooseLoc">Choose Crop Location</string>
+    <string name="acre">Area in acre</string>
+    <string name="crop">Crop</string>
+    <string name="submit">Submit</string>
+
+    <!--    soil test-->
+    <string name="soilData">Soil Data</string>
+    <string name="soilReport">Soil Report</string>
+    <string name="download">Download</string>
+
+    <!--    ABHISHEK-->
+    <string name="weather_matters_nwe_ve_got_the_details" />
+    <string name="_00_00_c">00:00 ºC</string>
+    <string name="textview">TextView</string>
+    <string name="_0000_hpa">0000 hPa</string>
+    <string name="humidity">Humidity</string>
+    <string name="_00_00">00:00</string>
+    <string name="sea">Sea</string>
+    <string name="sunset">Sunset</string>
+    <string name="sunrise">Sunrise</string>
+    <string name="condition">Condition</string>
+    <string name="sunny">SUNNY</string>
+    <string name="wind_speed">Wind Speed</string>
+    <string name="_0_00_m_s">0.00 m/s</string>
+    <string name="_11_april_2025">11 April 2025</string>
+    <string name="tuesday">Tuesday</string>
+    <string name="city_name">City Name</string>
+    <string name="max_00_00_c">Max: 00:00ºC</string>
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+
+
+</resources>

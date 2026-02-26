@@ -1,0 +1,90 @@
+<resources>
+    <string name="app_name">ਕ੍ਰੌਪਟ੍ਰੈਕ</string>
+
+    <!-- Login and SignUp page -->
+    <string name="Login">ਲੌਗਇਨ</string>
+    <string name="Signup">ਸਾਇਨਅੱਪ</string>
+    <string name="signup_full_name">ਪੂਰਾ ਨਾਂ</string>
+    <string name="signup_phone_number">ਫ਼ੋਨ ਨੰਬਰ</string>
+    <string name="signup_email">ਈਮੇਲ</string>
+    <string name="signup_password">ਪਾਸਵਰਡ</string>
+    <string name="signup_confirm_password">ਪਾਸਵਰਡ ਦੀ ਪੁਸ਼ਟੀ ਕਰੋ</string>
+    <string name="getOtp">ਓਟੀਪੀ ਪ੍ਰਾਪਤ ਕਰੋ</string>
+    <string name="signupWith">ਜਾਂ ਸਾਇਨਅੱਪ ਕਰੋ</string>
+    <string name="loginWith">ਜਾਂ ਲੌਗਇਨ ਕਰੋ</string>
+    <string name="alreadyAcc">पहਲੇ ਹੀ ਖਾਤਾ ਹੈ? ਇੱਥੇ ਲੌਗਇਨ ਕਰੋ</string>
+    <string name="login_google">ਗੂਗਲ</string>
+    <string name="login_facebook">ਫੇਸਬੁੱਕ</string>
+    <string name="notAcc">ਖਾਤਾ ਨਹੀਂ ਹੈ? ਇੱਥੇ ਸਾਇਨਅੱਪ ਕਰੋ</string>
+
+    <string name="or">ਜਾਂ</string>
+    <string name="ipErr">ਕਿਰਪਾ ਕਰਕੇ ਸਾਰੇ ਲਾਜ਼ਮੀ ਵੇਰਵੇ ਭਰੋ</string>
+    <string name="cnfErr">ਪਾਸਵਰਡ ਅਤੇ ਪੁਸ਼ਟੀ ਪਾਸਵਰਡ ਇੱਕੋ ਜਿਹੇ ਹੋਣੇ ਚਾਹੀਦੇ ਹਨ</string>
+
+    <!-- Main -->
+    <string name="home">ਘਰ</string>
+    <string name="climate">ਮੌਸਮ</string>
+    <string name="reel">ਰੀਲ</string>
+    <string name="rent">ਕਿਰਾਇਆ</string>
+
+    <!-- Home -->
+    <string name="address">ਫਗਵਾੜਾ, ਪੰਜਾਬ</string>
+    <string name="day">ਧੁੱਪਦਾਰ</string>
+    <string name="addCrop">ਫਸਲ ਸ਼ਾਮਲ ਕਰੋ</string>
+    <string name="cropprogress">ਫਸਲ ਦੀ ਤਰੱਕੀ</string>
+    <string name="soilTest">ਮਿੱਟੀ ਦੀ ਜਾਂਚ</string>
+    <string name="uploadImage">ਚਿੱਤਰ ਅੱਪਲੋਡ ਕਰੋ</string>
+    <string name="feedback">ਸੁਝਾਅ</string>
+    <string name="explore">ਐਕਸਪਲੋਰ ਕਰੋ</string>
+
+    <!-- govtYojna -->
+    <string name="govtYojna">ਸਰਕਾਰੀ ਯੋਜਨਾ</string>
+    <string name="yojnaPara">
+        ਪ੍ਰਧਾਨ ਮੰਤਰੀ ਕਿਸਾਨ ਸਮੱਨ ਨਿਧੀ (PM-KISAN) ਇੱਕ ਸਰਕਾਰੀ ਯੋਜਨਾ ਹੈ ਜੋ ਕਿਸਾਨਾਂ ਨੂੰ ਆਰਥਿਕ ਸਹਾਇਤਾ ਦਿੰਦੀ ਹੈ।
+        ਇਸ ਯੋਜਨਾ ਤਹਿਤ ਲਾਇਕ ਕਿਸਾਨਾਂ ਨੂੰ ₹6,000 ਸਾਲਾਨਾ ਤਿੰਨ ਕਿਸ਼ਤਾਂ ਵਿੱਚ ਸੀਧਾ ਬੈਂਕ ਖਾਤਿਆਂ ਵਿੱਚ ਦਿੱਤਾ ਜਾਂਦਾ ਹੈ।
+
+        ਇਹ ਯੋਜਨਾ ਛੋਟੇ ਕਿਸਾਨਾਂ ਦੀ ਆਮਦਨ ਵਧਾਉਣ ਅਤੇ ਕਰਜ਼ਿਆਂ ਤੋਂ ਆਜ਼ਾਦ ਕਰਨ ਵਿੱਚ ਮਦਦ ਕਰਦੀ ਹੈ।
+        ਇਸ ਨਾਲ ਬੀਜ, ਖਾਦ, ਅਤੇ ਹੋਰ ਜ਼ਰੂਰੀ ਖੇਤੀ ਸਮਾਨ ਦੀ ਖਰੀਦ ਵਿੱਚ ਮਦਦ ਮਿਲਦੀ ਹੈ।
+
+        ਕਿਸਾਨ PM-KISAN ਲਈ ਆਨਲਾਈਨ ਜਾਂ ਨੇੜਲੇ ਕਿਸਾਨ ਕੇਂਦਰ ਰਾਹੀਂ ਰਜਿਸਟਰ ਕਰ ਸਕਦੇ ਹਨ।
+        ਇਹ ਯੋਜਨਾ ਪਿੰਡਾਂ ਦੀ ਆਰਥਿਕਤਾ ਨੂੰ ਮਜ਼ਬੂਤ ਬਣਾਉਂਦੀ ਹੈ।
+    </string>
+
+    <!-- AddCrop -->
+    <string name="wheat">ਗੰਹੂੰ</string>
+    <string name="pea">ਮਟਰ</string>
+    <string name="onion">ਪਿਆਜ਼</string>
+
+    <!-- chooseCropLoc -->
+    <string name="chooseLoc">ਫਸਲ ਦੀ ਥਾਂ ਚੁਣੋ</string>
+    <string name="acre">ਏਕੜ ਵਿੱਚ ਖੇਤਰ</string>
+    <string name="crop">ਫਸਲ</string>
+    <string name="submit">ਜਮ੍ਹਾਂ ਕਰੋ</string>
+
+    <!-- soil test -->
+    <string name="soilData">ਮਿੱਟੀ ਦਾ ਡਾਟਾ</string>
+    <string name="soilReport">ਮਿੱਟੀ ਦੀ ਰਿਪੋਰਟ</string>
+    <string name="download">ਡਾਊਨਲੋਡ ਕਰੋ</string>
+
+<!--    abhishek-->
+    <string name="weather_matters_nwe_ve_got_the_details">ਮੌਸਮ ਮਹੱਤਵਪੂਰਨ ਹੈ, ਸਾਡੇ ਕੋਲ ਵੇਰਵੇ ਹਨ</string>
+    <string name="_00_00_c">00:00 ºC</string>
+    <string name="textview">ਟੈਕਸਟ ਵਿਊ</string>
+    <string name="_0000_hpa">0000 hPa</string>
+    <string name="humidity">ਨਮੀ</string>
+    <string name="_00_00">00:00</string>
+    <string name="sea">ਸਮੁੰਦਰ</string>
+    <string name="sunset">ਸੂਰਜ ਡੁੱਬਣ</string>
+    <string name="sunrise">ਸੂਰਜ ਚੜ੍ਹਨਾ</string>
+    <string name="condition">ਸਥਿਤੀ</string>
+    <string name="sunny">ਧੁੱਪਦਾਰ</string>
+    <string name="wind_speed">ਹਵਾ ਦੀ ਗਤੀ</string>
+    <string name="_0_00_m_s">0.00 ਮੀ/ਸ</string>
+    <string name="_11_april_2025">11 ਅਪ੍ਰੈਲ 2025</string>
+    <string name="tuesday">ਮੰਗਲਵਾਰ</string>
+    <string name="city_name">ਸ਼ਹਿਰ ਦਾ ਨਾਂ</string>
+    <string name="max_00_00_c">ਵੱਧੋ ਵੱਧ: 00:00ºC</string>
+
+    <string name="hello_blank_fragment">Hello Blank Fragment</string>
+
+</resources>

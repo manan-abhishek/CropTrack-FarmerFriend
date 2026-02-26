@@ -1,0 +1,73 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_11"
+    android:scaleType="centerCrop"
+    android:contentDescription="Background" />
+
+    <!-- Overlay Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#B3FFFFFF"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:elevation="6dp"
+        android:backgroundTintMode="src_atop"
+        android:clipToPadding="false">
+
+        <!-- Equipment Image -->
+        <ImageView
+            android:id="@+id/equipmentImage"
+            android:layout_width="match_parent"
+            android:layout_height="250dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img"
+            android:contentDescription="Equipment Image"
+            android:background="@drawable/img" />
+
+        <!-- Equipment Name -->
+        <TextView
+            android:id="@+id/equipmentName"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Tractor"
+            android:textSize="24sp"
+            android:textStyle="bold"
+            android:textColor="#000000"
+            android:layout_marginTop="16dp" />
+
+        <!-- Equipment Description -->
+        <TextView
+            android:id="@+id/equipmentDescription"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="A powerful machine used for plowing and tilling fields."
+            android:textSize="16sp"
+            android:textColor="#444444"
+            android:layout_marginTop="8dp" />
+
+        <!-- Booking Button -->
+        <Button
+            android:id="@+id/btnBookEquipment"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Book Equipment"
+            android:layout_marginTop="16dp"
+            android:textColor="#FFFFFF" />
+    </LinearLayout>
+</ScrollView>
+    </FrameLayout>

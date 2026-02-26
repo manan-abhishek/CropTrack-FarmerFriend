@@ -1,0 +1,76 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:layout_margin="16dp"
+    android:background="@drawable/weather_card"
+    android:elevation="8dp"
+    android:padding="24dp">
+
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29&#176;"
+        android:textColor="@color/white"
+        android:textSize="60dp"
+        app:layout_constraintBottom_toTopOf="@+id/highLowTemp"
+        app:layout_constraintEnd_toEndOf="@+id/highLowTemp"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="@+id/highLowTemp"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!--    Flag ka kya karna hai...-->
+    <TextView
+        android:id="@+id/highLowTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:text="High: 32&#176; Low: 27&#176;"
+        android:textColor="#E7FFFC"
+        android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/address"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/temp" />
+
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="12dp"
+        android:gravity="center"
+        android:text="Phagwara-Punjab"
+        android:textColor="#fff"
+        android:textSize="24dp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/highLowTemp" />
+
+    <ImageView
+        android:id="@+id/weatherImage"
+        android:layout_width="96dp"
+        android:layout_height="96dp"
+        android:layout_margin="6dp"
+        android:background="@drawable/circle_bg"
+        android:clipToOutline="true"
+        android:src="@drawable/weather_image"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/natureName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_margin="18dp"
+        android:text="Warm"
+        android:textColor="#fff"
+        android:textSize="18dp"
+        android:textStyle="bold"
+        app:layout_constraintEnd_toEndOf="@+id/weatherImage"
+        app:layout_constraintStart_toStartOf="@+id/weatherImage"
+        app:layout_constraintTop_toBottomOf="@+id/weatherImage" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

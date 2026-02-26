@@ -1,0 +1,127 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="16dp"
+    tools:context=".CropProgress_2">
+
+    <!-- Crop Name Header -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cropNameHeader"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crop:"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="24sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <!-- Crop Name Value -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cropName"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Unknown Crop"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_margin="8dp"
+        android:padding="6dp"
+        app:layout_constraintBottom_toBottomOf="@+id/cropNameHeader"
+        app:layout_constraintStart_toEndOf="@+id/cropNameHeader"
+        app:layout_constraintTop_toTopOf="@+id/cropNameHeader" />
+
+    <!-- Crop Area and Location -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cropArea"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Area: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/cropName"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/cropLocation"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/cropLocation"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Location: "
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="18sp"
+        app:layout_constraintTop_toBottomOf="@id/cropName"
+        app:layout_constraintStart_toEndOf="@id/cropArea"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_weight="1" />
+
+    <!-- Start Date Label -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/dateLabel"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Start Date:"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/cropArea"
+        app:layout_constraintStart_toStartOf="parent" />
+
+    <!-- Start Date Value -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/date"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="--/--/----"
+        android:textColor="?attr/colorPrimary"
+        android:textSize="18sp"
+        app:layout_constraintBaseline_toBaselineOf="@id/dateLabel"
+        app:layout_constraintStart_toEndOf="@id/dateLabel" />
+
+    <!-- Progress Bar -->
+    <ProgressBar
+        android:id="@+id/progressBar"
+        style="?android:attr/progressBarStyleHorizontal"
+        android:layout_width="0dp"
+        android:layout_height="24dp"
+        android:progress="0"
+        android:max="100"
+        android:scaleY="2"
+        android:progressTint="?attr/colorPrimary"
+        android:indeterminate="false"
+        app:layout_constraintTop_toBottomOf="@id/dateLabel"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toEndOf="parent"
+        android:layout_marginTop="32dp" />
+
+    <!-- Current Stage -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/currentStateText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Current Stage: Unknown"
+        android:textColor="?attr/colorOnSurface"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        app:layout_constraintTop_toBottomOf="@id/progressBar"
+        app:layout_constraintStart_toStartOf="parent"
+        android:layout_marginTop="16dp" />
+
+    <!-- Optional hidden Crop ID -->
+    <com.google.android.material.textview.MaterialTextView
+        android:id="@+id/id"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Crop ID:"
+        android:textSize="16sp"
+        android:textColor="?attr/colorOnSurface"
+        app:layout_constraintTop_toBottomOf="@id/currentStateText"
+        app:layout_constraintStart_toStartOf="parent"
+        android:visibility="gone" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

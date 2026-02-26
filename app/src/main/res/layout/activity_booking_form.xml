@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <!-- Background Image -->
+    <ImageView
+        android:id="@+id/backgroundImage"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:src="@drawable/img_11"
+    android:scaleType="centerCrop"
+    android:contentDescription="Background" />
+
+    <!-- Overlay Content -->
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:padding="16dp">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:background="#B3FFFFFF"
+        android:padding="16dp"
+        android:layout_margin="16dp"
+        android:elevation="6dp"
+        android:clipToPadding="false">
+
+        <!-- Selected Equipment Image -->
+        <ImageView
+            android:id="@+id/imgSelectedEquipment"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="centerCrop"
+            android:src="@drawable/img" />
+
+        <!-- Equipment Name -->
+        <TextView
+            android:id="@+id/tvSelectedEquipment"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Selected Equipment"
+            android:textSize="20sp"
+            android:textStyle="bold"
+            android:layout_marginTop="16dp" />
+
+        <!-- Name Input -->
+        <EditText
+            android:id="@+id/etName"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Your Name"
+            android:layout_marginTop="16dp" />
+
+        <!-- Date Input -->
+        <EditText
+            android:id="@+id/etDate"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Booking Date"
+            android:layout_marginTop="8dp" />
+
+        <!-- Submit Button -->
+        <Button
+            android:id="@+id/btnSubmitBooking"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Submit Booking"
+            android:layout_marginTop="16dp" />
+    </LinearLayout>
+</ScrollView>
+    </FrameLayout>

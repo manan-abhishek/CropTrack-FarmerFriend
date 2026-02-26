@@ -1,0 +1,558 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingHorizontal="6dp"
+    tools:context=".Home">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:fillViewport="true"
+        android:scrollbars="none">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:layout_marginTop="24dp"
+            android:descendantFocusability="blocksDescendants">
+
+            <!-- Weather Card -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:id="@+id/weather_card"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginHorizontal="8dp"
+                android:layout_marginBottom="12dp"
+                android:layout_marginTop="2dp"
+                android:background="@drawable/weather_card"
+                android:padding="20dp"
+                app:cardCornerRadius="16dp"
+                app:cardElevation="8dp">
+
+                <TextView
+                    android:id="@+id/weatherTemp"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="28dp"
+                    android:text="25°C"
+                    android:textColor="@android:color/white"
+                    android:textSize="40sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toTopOf="@id/weatherLocation"
+                    app:layout_constraintStart_toStartOf="parent" />
+
+                <TextView
+                    android:id="@+id/weatherLocation"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_marginBottom="8dp"
+                    android:text="@string/address"
+                    android:textColor="@android:color/white"
+                    android:textSize="16sp"
+                    android:textStyle="italic"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintStart_toStartOf="@id/weatherTemp" />
+
+                <ImageView
+                    android:id="@+id/weatherImage"
+                    android:layout_width="108dp"
+                    android:layout_height="108dp"
+                    android:src="@drawable/weather_image"
+                    android:background="@drawable/circle_bg"
+                    android:scaleType="centerInside"
+                    android:cropToPadding="true"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/weatherCondition" />
+
+                <TextView
+                    android:id="@+id/weatherCondition"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="8dp"
+                    android:text="@string/day"
+                    android:textSize="24sp"
+                    android:textStyle="bold"
+                    app:layout_constraintBottom_toBottomOf="parent"
+                    app:layout_constraintEnd_toEndOf="@id/weatherImage"
+                    app:layout_constraintStart_toStartOf="@id/weatherImage"
+                    app:layout_constraintTop_toBottomOf="@id/weatherImage" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Grid Section -->
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:padding="0dp">
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/verticalGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="vertical"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <androidx.constraintlayout.widget.Guideline
+                    android:id="@+id/horizontalGuideline"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal"
+                    app:layout_constraintGuide_percent="0.5" />
+
+                <!-- Card 1: Add Crop -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card1"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="#BEE3CB"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/verticalGuideline"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/horizontalGuideline">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="8dp"
+                            android:src="@drawable/add_icon"
+                            android:background="@drawable/circle_bg"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/addCrop"
+                            android:textStyle="bold"
+                            android:textColor="#4BA26A"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card 2: Crop Report -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card2"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="#BEE3CB"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp"
+                    app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toTopOf="parent"
+                    app:layout_constraintBottom_toTopOf="@id/horizontalGuideline">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="8dp"
+                            android:src="@drawable/analyze_icon"
+                            android:background="@drawable/circle_bg"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/cropprogress"
+                            android:textStyle="bold"
+                            android:textColor="#4BA26A"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card 3: Soil Test -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card3"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="#BEE3CB"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintEnd_toStartOf="@id/verticalGuideline"
+                    app:layout_constraintTop_toBottomOf="@id/horizontalGuideline"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="8dp"
+                            android:src="@drawable/soil_icon"
+                            android:background="@drawable/circle_bg"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/soilTest"
+                            android:textStyle="bold"
+                            android:textColor="#4BA26A"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+                <!-- Card 4: Upload Image -->
+                <com.google.android.material.card.MaterialCardView
+                    android:id="@+id/card4"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_margin="16dp"
+                    app:cardBackgroundColor="#BEE3CB"
+                    app:cardCornerRadius="16dp"
+                    app:cardElevation="4dp"
+                    app:strokeColor="@android:color/white"
+                    app:strokeWidth="2dp"
+                    app:layout_constraintStart_toEndOf="@id/verticalGuideline"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/horizontalGuideline"
+                    app:layout_constraintBottom_toBottomOf="parent">
+
+                    <LinearLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="vertical"
+                        android:padding="16dp"
+                        android:gravity="center">
+
+                        <ImageView
+                            android:layout_width="64dp"
+                            android:layout_height="64dp"
+                            android:padding="8dp"
+                            android:src="@drawable/add_image_icon"
+                            android:background="@drawable/circle_bg"
+                            android:layout_gravity="center" />
+
+                        <TextView
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="@string/uploadImage"
+                            android:textStyle="bold"
+                            android:textColor="#4BA26A"
+                            android:gravity="center"
+                            android:layout_marginTop="8dp" />
+                    </LinearLayout>
+                </com.google.android.material.card.MaterialCardView>
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+
+            <!-- Feedback Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_margin="6dp"
+                android:padding="6dp">
+
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="6dp"
+                    android:src="@drawable/feedback"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/feedback"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"/>
+            </LinearLayout>
+
+            <!-- Horizontal Scroll for Reviews -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:layout_margin="4dp">
+                    <!-- Review Card 1 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:strokeColor="#bee3cb"
+                        app:strokeWidth="4dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="8dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/user"
+                                android:padding="6dp"
+                                android:background="@drawable/circle_bg"
+                                android:scaleType="centerCrop"
+                                android:cropToPadding="true"
+                                android:layout_margin="12dp" />
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:text="The customers love it. They absolutely adore it. It's very powerful. It's a must-have tool for every restaurant owner to run their restaurant in a proactive way."/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <!-- Review Card 2 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:strokeColor="#bee3cb"
+                        app:strokeWidth="4dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="8dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/user"
+                                android:background="@drawable/circle_bg"
+                                android:scaleType="centerCrop"
+                                android:cropToPadding="true"
+                                android:padding="6dp"
+                                android:layout_margin="12dp" />
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:text="The customers love it. They absolutely adore it. It's very powerful. It's a must-have tool for every restaurant owner to run their restaurant in a proactive way."/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <!-- Review Card 3 -->
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:background="#fff"
+                        app:strokeColor="#bee3cb"
+                        app:strokeWidth="4dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="8dp">
+                        <LinearLayout
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:padding="8dp"
+                            android:orientation="horizontal">
+                            <ImageView
+                                android:layout_width="36dp"
+                                android:layout_height="36dp"
+                                android:src="@drawable/user"
+                                android:background="@drawable/circle_bg"
+                                android:scaleType="centerCrop"
+                                android:cropToPadding="true"
+                                android:padding="6dp"
+                                android:layout_margin="12dp" />
+                            <TextView
+                                android:layout_width="150dp"
+                                android:layout_height="100dp"
+                                android:text="The customers love it. They absolutely adore it. It's very powerful. It's a must-have tool for every restaurant owner to run their restaurant in a proactive way."/>
+                        </LinearLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+
+            <!-- Explore Section -->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:gravity="center_vertical"
+                android:layout_margin="6dp"
+                android:padding="6dp">
+                <ImageView
+                    android:layout_width="24dp"
+                    android:layout_height="24dp"
+                    android:layout_margin="6dp"
+                    android:src="@drawable/explore"/>
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="@string/explore"
+                    android:textSize="18sp"
+                    android:textStyle="bold"
+                    android:layout_margin="6dp"/>
+            </LinearLayout>
+
+            <!-- Horizontal Scroll for Video Reels -->
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:scrollbars="none">
+                <LinearLayout
+                    android:id="@+id/govtyojnas"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="horizontal"
+                    android:padding="8dp">
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="120dp"
+                        android:background="#fff"
+                        app:strokeColor="#bee3cb"
+                        app:strokeWidth="4dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="8dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/gov_yojna"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:background="#80000000"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Government Yojna"
+                                android:textColor="#fff"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:padding="16dp"
+                                android:layout_margin="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="120dp"
+                        android:background="#fff"
+                        app:strokeColor="#bee3cb"
+                        app:strokeWidth="4dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="8dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/gov_yojna"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:background="#80000000"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Government Yojna"
+                                android:textColor="#fff"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:padding="16dp"
+                                android:layout_margin="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                    <com.google.android.material.card.MaterialCardView
+                        android:layout_width="180dp"
+                        android:layout_height="120dp"
+                        android:background="#fff"
+                        app:strokeColor="#bee3cb"
+                        app:strokeWidth="4dp"
+                        app:cardCornerRadius="16dp"
+                        android:layout_margin="8dp">
+                        <androidx.constraintlayout.widget.ConstraintLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent">
+
+                            <ImageView
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:src="@drawable/gov_yojna"/>
+
+                            <View
+                                android:layout_width="match_parent"
+                                android:layout_height="300dp"
+                                android:background="#80000000"
+                                app:layout_constraintTop_toTopOf="parent"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"
+                                app:layout_constraintEnd_toEndOf="parent" />
+
+                            <TextView
+                                android:layout_width="wrap_content"
+                                android:layout_height="wrap_content"
+                                android:text="Government Yojna"
+                                android:textColor="#fff"
+                                android:textSize="20sp"
+                                android:textStyle="bold"
+                                android:padding="16dp"
+                                android:layout_margin="8dp"
+                                app:layout_constraintBottom_toBottomOf="parent"
+                                app:layout_constraintStart_toStartOf="parent"/>
+
+                        </androidx.constraintlayout.widget.ConstraintLayout>
+                    </com.google.android.material.card.MaterialCardView>
+                </LinearLayout>
+            </HorizontalScrollView>
+        </LinearLayout>
+    </ScrollView>
+</FrameLayout>

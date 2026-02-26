@@ -72,6 +72,67 @@ Android Developer | Kotlin | Retrofit | UI/UX
 🔗 LinkedIn: https://www.linkedin.com/in/abhishekkumarnayak11
 
 
+## 📱 Application Screenshots
 
+<table>
 
+<tr>
+<td align="center"><b>Login Page</b><br><img src="Screenshots/login.jpg" width="250"/></td>
+<td align="center"><b>Home Dashboard</b><br><img src="Screenshots/homepage.jpg" width="250"/></td>
+</tr>
 
+<tr>
+<td align="center"><b>Language Selection</b><br><img src="Screenshots/language selector.jpg" width="250"/></td>
+<td align="center"><b>Hindi Support</b><br><img src="Screenshots/hindi.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Add Crop</b><br><img src="Screenshots/add crop.jpg" width="250"/></td>
+<td align="center"><b>Crop Details</b><br><img src="Screenshots/crop details.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Camera Retake</b><br><img src="Screenshots/retake.jpg" width="250"/></td>
+<td align="center"><b>Gallery Upload</b><br><img src="Screenshots/upload img2.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Crop Location</b><br><img src="Screenshots/crop loc.jpg" width="250"/></td>
+<td align="center"><b>Crop Tracking</b><br><img src="Screenshots/crp tracking.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Soil Data Entry</b><br><img src="Screenshots/soil data.jpg" width="250"/></td>
+<td align="center"><b>Soil Module Page</b><br><img src="Screenshots/soil page.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Soil Report Upload</b><br><img src="Screenshots/soil report.jpg" width="250"/></td>
+<td align="center"><b>Soil Suitable Result</b><br><img src="Screenshots/soil result.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Soil Not Suitable</b><br><img src="Screenshots/soil result2.jpg" width="250"/></td>
+<td align="center"><b>Upload Image</b><br><img src="Screenshots/upload image.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Equipment Rental</b><br><img src="Screenshots/equip.jpg" width="250"/></td>
+<td align="center"><b>Saved Equipment</b><br><img src="Screenshots/equip saved.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Notifications</b><br><img src="Screenshots/notify.jpg" width="250"/></td>
+<td align="center"><b>Government Scheme Info</b><br><img src="Screenshots/pmfb.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Temperature Dashboard</b><br><img src="Screenshots/temp.jpg" width="250"/></td>
+<td align="center"><b>Rent Equipment</b><br><img src="Screenshots/rent.jpg" width="250"/></td>
+</tr>
+
+<tr>
+<td align="center"><b>Infection Detection</b><br><img src="Screenshots/infection free.jpg" width="250"/></td>
+</tr>
+
+</table>

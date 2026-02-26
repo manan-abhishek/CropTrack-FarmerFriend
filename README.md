@@ -1,6 +1,5 @@
-# CropTrack-FarmerFriend
+# CropTrack
 
-## Developer
+## Farmer Friend
 
-... (other content remains intact, without the image link) 
-
+This is the README for the CropTrack-FarmerFriend project. Description and usage examples can go here.

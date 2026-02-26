@@ -71,7 +71,7 @@ Abhishek Kumar Nayak
 Android Developer | Kotlin | Retrofit | UI/UX
 🔗 LinkedIn: https://www.linkedin.com/in/abhishekkumarnayak11
 
-Screenshots:
 
 
-![login](https://github.com/user-attachments/assets/bb07415f-eb91-4375-aca4-b2b17214033a)
+
+

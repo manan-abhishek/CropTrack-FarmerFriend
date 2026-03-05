@@ -1,0 +1,118 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fillViewport="true"
+    android:background="@drawable/detection_bg">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="20dp">
+
+        <!-- Title -->
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Plant Disease Detection"
+            android:textSize="22sp"
+            android:textStyle="bold"
+            android:textColor="@color/black"
+            android:layout_gravity="center"
+            android:layout_marginBottom="16dp"/>
+
+        <!-- Leaf Image Preview -->
+        <ImageView
+            android:id="@+id/plantImage"
+            android:layout_width="match_parent"
+            android:layout_height="220dp"
+            android:scaleType="centerCrop"
+            android:background="@drawable/backgroundshape"
+            android:src="@drawable/leaf_placeholder"
+            android:contentDescription="Plant Image"/>
+
+        <!-- Upload Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnUploadImage"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Upload Leaf Image"
+            android:layout_marginTop="16dp"
+            app:cornerRadius="12dp"/>
+
+        <!-- Camera Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnOpenCamera"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Capture From Camera"
+            android:layout_marginTop="10dp"
+            app:cornerRadius="12dp"/>
+
+        <!-- Detect Button -->
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btnDetectDisease"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Detect Disease"
+            android:layout_marginTop="16dp"
+            android:backgroundTint="@color/crop_green"
+            app:cornerRadius="12dp"/>
+
+        <!-- Result Card -->
+        <com.google.android.material.card.MaterialCardView
+            android:id="@+id/resultCard"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="20dp"
+            app:cardCornerRadius="16dp"
+            app:cardElevation="6dp">
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="vertical"
+                android:padding="16dp">
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Detected Disease"
+                    android:textStyle="bold"
+                    android:textSize="18sp"/>
+
+                <TextView
+                    android:id="@+id/diseaseName"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Healthy"
+                    android:textSize="16sp"
+                    android:textColor="@color/black"
+                    android:layout_marginTop="6dp"/>
+
+                <TextView
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Recommended Treatment"
+                    android:textStyle="bold"
+                    android:textSize="18sp"
+                    android:layout_marginTop="14dp"/>
+
+                <TextView
+                    android:id="@+id/diseaseTreatment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:text="Apply organic pesticide and remove infected leaves."
+                    android:textSize="15sp"
+                    android:layout_marginTop="6dp"/>
+
+            </LinearLayout>
+
+        </com.google.android.material.card.MaterialCardView>
+
+    </LinearLayout>
+
+</ScrollView>

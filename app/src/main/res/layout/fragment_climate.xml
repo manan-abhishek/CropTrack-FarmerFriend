@@ -8,9 +8,7 @@
     android:layout_height="match_parent"
     android:fillViewport="true">
 
-    <HorizontalScrollView
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content">
+
 
 
     <androidx.constraintlayout.widget.ConstraintLayout
@@ -397,5 +395,5 @@
 
     </androidx.constraintlayout.widget.ConstraintLayout>
 
-    </HorizontalScrollView>
+
 </ScrollView>

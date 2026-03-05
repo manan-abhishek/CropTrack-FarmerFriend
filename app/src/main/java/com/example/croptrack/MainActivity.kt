@@ -13,16 +13,19 @@ import android.widget.Toast
 import androidx.appcompat.app.AppCompatActivity
 import androidx.core.content.ContextCompat
 import androidx.fragment.app.Fragment
-import com.example.croptrack.Rent
+import androidx.viewpager2.widget.ViewPager2
 import com.google.android.material.dialog.MaterialAlertDialogBuilder
 import java.util.Locale
 
-class  MainActivity : AppCompatActivity() {
+class MainActivity : AppCompatActivity() {
+
+
     private var openImg: ImageView? = null
     private var openTxt: TextView? = null
     lateinit var notificationCount: TextView
+    private lateinit var viewPager: ViewPager2
 
-    public fun open(newImg: ImageView, newTxt: TextView) {
+    fun open(newImg: ImageView, newTxt: TextView) {
         openImg?.setColorFilter(Color.WHITE, PorterDuff.Mode.SRC_IN)
         openTxt?.setTextColor(Color.WHITE)
 
@@ -37,20 +40,9 @@ class  MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
 
-        val openFragment = intent.getStringExtra("open_fragment")
-        if(openFragment == "yojna_fragment"){
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, GovtYojna())
-                .addToBackStack("Home")
-                .commit()
-        }
-        val open_crop_progress = intent.getStringExtra("open_crop_progress")
-        if(open_crop_progress == "crop_progress"){
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, CropProgress_1())
-                .addToBackStack("Home")
-                .commit()
-        }
+        viewPager = findViewById(R.id.viewPager)
+        val adapter = ViewPagerAdapter(this)
+        viewPager.adapter = adapter
 
         val logo: ImageView = findViewById(R.id.logo)
         val homeBtn: LinearLayout = findViewById(R.id.btnHome)
@@ -85,10 +77,7 @@ class  MainActivity : AppCompatActivity() {
         notificationCount.background = drawable
 
         logo.setOnClickListener {
-            val Home = Home()
-            supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, Home)
-                .commit()
+            viewPager.currentItem = 0
             open(homeIcon, home)
         }
 
@@ -109,56 +98,46 @@ class  MainActivity : AppCompatActivity() {
         notification.setOnClickListener {
             val notifyFrag = Notifications()
             supportFragmentManager.beginTransaction()
-                .replace(R.id.fragment, notifyFrag)
+                .replace(R.id.viewPager, notifyFrag)
                 .addToBackStack("Home")
                 .commit()
         }
 
         openImg = homeIcon
         openTxt = home
-        openFragment(Home())
         open(homeIcon, home)
 
         homeBtn.setOnClickListener {
-            if (openImg != homeIcon) {
-                open(homeIcon, home)
-                openFragment(Home())
-            }
+            viewPager.currentItem = 0
+            open(homeIcon, home)
         }
 
         climateBtn.setOnClickListener {
-            if (openImg != climateIcon) {
-                open(climateIcon, climate)
-                openFragment(Climate())
-            }
+            viewPager.currentItem = 1
+            open(climateIcon, climate)
         }
 
         reelBtn.setOnClickListener {
-            if (openImg != reelIcon) {
-                open(reelIcon, reel)
-                openFragment(Reel())
-            }
+            viewPager.currentItem = 2
+            open(reelIcon, reel)
         }
 
         rentBtn.setOnClickListener {
-            // Navigate to Rent activity instead of opening a fragment
-            if (openImg != rentIcon) {
-                open(rentIcon, rent)
-                val intent = Intent(this, Rent::class.java)
-                startActivity(intent)
-            }
-        }
-    }
+            viewPager.currentItem = 3
+            open(rentIcon, rent)
 
-    private fun openFragment(fragment: Fragment) {
-        val currentFragment = supportFragmentManager.findFragmentById(R.id.fragment)
-        if (currentFragment != null && currentFragment::class == fragment::class) {
-            return
         }
-        supportFragmentManager.beginTransaction()
-            .replace(R.id.fragment, fragment)
-            .addToBackStack(null)
-            .commit()
+
+        viewPager.registerOnPageChangeCallback(object : ViewPager2.OnPageChangeCallback() {
+            override fun onPageSelected(position: Int) {
+                when (position) {
+                    0 -> open(homeIcon, home)
+                    1 -> open(climateIcon, climate)
+                    2 -> open(reelIcon, reel)
+                    3 -> open(rentIcon, rent)
+                }
+            }
+        })
     }
 
     private fun showLangMenu() {
@@ -166,8 +145,8 @@ class  MainActivity : AppCompatActivity() {
 
         MaterialAlertDialogBuilder(this)
             .setTitle("Choose Language")
-            .setItems(languages){_, which ->
-                when(which){
+            .setItems(languages) { _, which ->
+                when (which) {
                     0 -> setLocale("en")
                     1 -> setLocale("hi")
                     2 -> setLocale("pa")
@@ -193,7 +172,6 @@ class  MainActivity : AppCompatActivity() {
         recreate()
     }
 
-    // Toolbar View Accessors for Fragments
     fun getHomeIcon(): ImageView = findViewById(R.id.homeIcon)
     fun getHomeText(): TextView = findViewById(R.id.home)
 
@@ -205,4 +183,6 @@ class  MainActivity : AppCompatActivity() {
 
     fun getRentIcon(): ImageView = findViewById(R.id.rentIcon)
     fun getRentText(): TextView = findViewById(R.id.rent)
+
+
 }

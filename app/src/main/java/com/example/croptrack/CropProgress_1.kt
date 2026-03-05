@@ -104,7 +104,7 @@ class CropProgress_1 : Fragment() {
         bundle.putString("cropDate", cropDate)
         frag.arguments = bundle
         parentFragmentManager.beginTransaction()
-            .replace(R.id.fragment, frag)
+            .replace(R.id.viewPager, frag)
             .addToBackStack(null)
             .commit()
     }

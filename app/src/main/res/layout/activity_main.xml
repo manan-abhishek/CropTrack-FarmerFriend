@@ -25,7 +25,7 @@
             android:layout_height="48dp"
             android:src="@drawable/logo"
             android:layout_margin="12dp"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/circle_bg"
             android:padding="6dp"
             android:layout_gravity="start"/>
@@ -35,7 +35,7 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/user"
-            android:layout_marginTop="5dp"
+            android:layout_marginTop="10dp"
             android:background="@drawable/circle_bg"
             android:layout_margin="12dp"
             android:padding="6dp"
@@ -74,15 +74,15 @@
         android:layout_marginEnd="-6dp"
         android:visibility="visible"/>
 
-    <androidx.constraintlayout.widget.ConstraintLayout
-        android:id="@+id/fragment"
+    <androidx.viewpager2.widget.ViewPager2
+        android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginVertical="6dp"
-        app:layout_constraintBottom_toTopOf="@+id/bottomToolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomToolbar"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topToolbar"/>
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"/>
 
     <!-- Lang changer-->
     <ImageView
@@ -98,134 +98,123 @@
         app:layout_constraintEnd_toEndOf="@+id/topToolbar"
         app:tint="#4BA26A" />
 
-    <!-- Bottom Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bottomToolbar"
         android:layout_width="match_parent"
-        android:layout_height="56dp"
+        android:layout_height="60dp"
         android:background="#4BA26A"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintBottom_toBottomOf="parent">
 
         <LinearLayout
             android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:gravity="center"
-            android:orientation="horizontal">
+            android:layout_height="match_parent"
+            android:orientation="horizontal"
+            android:gravity="center">
 
+            <!-- Home -->
             <LinearLayout
                 android:id="@+id/btnHome"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/homeIcon"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:src="@drawable/home"
-                    app:tint="@android:color/white" />
+                    app:tint="@android:color/white"/>
 
                 <TextView
                     android:id="@+id/home"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/home"
-                    android:textColor="@android:color/white"
-                    android:textSize="16sp"
-                    android:textStyle="bold" />
+                    android:layout_width="wrap_content"
+                    android:text="Home"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"/>
             </LinearLayout>
 
+
+            <!-- Weather -->
             <LinearLayout
                 android:id="@+id/btnClimate"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/climateIcon"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:src="@drawable/climate"
-                    app:tint="@android:color/white" />
+                    app:tint="@android:color/white"/>
 
                 <TextView
                     android:id="@+id/climate"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/climate"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp" />
+                    android:layout_width="wrap_content"
+                    android:text="Weather"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"/>
             </LinearLayout>
 
+
+            <!-- Detect -->
             <LinearLayout
                 android:id="@+id/btnReel"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/reelIcon"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:src="@drawable/explore"
-                    app:tint="@android:color/white" />
+                    app:tint="@android:color/white"/>
 
                 <TextView
                     android:id="@+id/reel"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/reel"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp" />
+                    android:layout_width="wrap_content"
+                    android:text="Detect"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"/>
             </LinearLayout>
 
+
+            <!-- Rent -->
             <LinearLayout
                 android:id="@+id/btnRent"
                 android:layout_width="0dp"
-                android:layout_height="wrap_content"
+                android:layout_height="match_parent"
                 android:layout_weight="1"
-                android:gravity="center"
                 android:orientation="vertical"
-                android:padding="8dp">
+                android:gravity="center">
 
                 <ImageView
                     android:id="@+id/rentIcon"
-                    android:layout_width="28dp"
-                    android:layout_height="28dp"
-                    android:layout_marginTop="6dp"
+                    android:layout_width="26dp"
+                    android:layout_height="26dp"
                     android:src="@drawable/rent_equipments"
-                    app:tint="@android:color/white" />
+                    app:tint="@android:color/white"/>
 
                 <TextView
                     android:id="@+id/rent"
-                    android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
-                    android:text="@string/rent"
-                    android:textColor="@android:color/white"
-                    android:textSize="12sp" />
-                <FrameLayout
-                    android:id="@+id/fragment_container"
-                    android:layout_width="match_parent"
-                    android:layout_height="match_parent"/>
-
+                    android:layout_width="wrap_content"
+                    android:text="Rent"
+                    android:textSize="15sp"
+                    android:textColor="@android:color/white"/>
             </LinearLayout>
 
         </LinearLayout>
-
 
     </androidx.appcompat.widget.Toolbar>
 

@@ -96,14 +96,17 @@ class Climate : Fragment() {
 
 
                     binding.temp.text = "$temp °C"
-                    binding.condition.text = condition
+                    binding.sunnycheck.text = condition
                     binding.maxTemp.text = "Max Temp: $maxT °C"
                     binding.minTemp.text = "Min Temp: $minT °C"
-                    binding.humidity.text = "$humidity %"
-                    binding.windspeed.text = "$wind m/s"
-                    binding.sea.text = "$sea hPa"
-                    binding.sunrise.text = formatTime(rise)
-                    binding.sunset.text = formatTime(set)
+
+                    binding.humiditymeasure.text = "$humidity %"
+                    binding.windspeedmeasurement.text = "$wind m/s"
+                    binding.sealevel.text = "$sea hPa"
+
+                    binding.sunrisetime.text = formatTime(rise)
+                    binding.sunsettime.text = formatTime(set)
+
                     binding.day.text = formatDay(System.currentTimeMillis())
                     binding.date.text = formatDate()
                     binding.cityName.text = cityName

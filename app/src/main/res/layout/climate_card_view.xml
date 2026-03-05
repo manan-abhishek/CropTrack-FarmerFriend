@@ -1,76 +1,78 @@
 <?xml version="1.0" encoding="utf-8"?>
 
-<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+<androidx.constraintlayout.widget.ConstraintLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
-    xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="wrap_content"
     android:layout_margin="16dp"
+    android:padding="20dp"
     android:background="@drawable/weather_card"
-    android:elevation="8dp"
-    android:padding="24dp">
+    android:elevation="8dp">
 
-    <TextView
-        android:id="@+id/temp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="29&#176;"
-        android:textColor="@color/white"
-        android:textSize="60dp"
-        app:layout_constraintBottom_toTopOf="@+id/highLowTemp"
-        app:layout_constraintEnd_toEndOf="@+id/highLowTemp"
-        app:layout_constraintHorizontal_bias="0.5"
-        app:layout_constraintStart_toStartOf="@+id/highLowTemp"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <!--    Flag ka kya karna hai...-->
-    <TextView
-        android:id="@+id/highLowTemp"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:text="High: 32&#176; Low: 27&#176;"
-        android:textColor="#E7FFFC"
-        android:textStyle="bold"
-        app:layout_constraintBottom_toTopOf="@+id/address"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/temp" />
-
-    <TextView
-        android:id="@+id/address"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_margin="12dp"
-        android:gravity="center"
-        android:text="Phagwara-Punjab"
-        android:textColor="#fff"
-        android:textSize="24dp"
-        android:textStyle="bold"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/highLowTemp" />
-
+    <!-- Weather Icon -->
     <ImageView
         android:id="@+id/weatherImage"
-        android:layout_width="96dp"
-        android:layout_height="96dp"
-        android:layout_margin="6dp"
+        android:layout_width="90dp"
+        android:layout_height="90dp"
         android:background="@drawable/circle_bg"
         android:clipToOutline="true"
         android:src="@drawable/weather_image"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"/>
 
+    <!-- Weather Condition -->
     <TextView
         android:id="@+id/natureName"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_margin="18dp"
         android:text="Warm"
-        android:textColor="#fff"
-        android:textSize="18dp"
+        android:textColor="@color/white"
+        android:textSize="16sp"
         android:textStyle="bold"
-        app:layout_constraintEnd_toEndOf="@+id/weatherImage"
-        app:layout_constraintStart_toStartOf="@+id/weatherImage"
-        app:layout_constraintTop_toBottomOf="@+id/weatherImage" />
+        app:layout_constraintEnd_toEndOf="@id/weatherImage"
+        app:layout_constraintStart_toStartOf="@id/weatherImage"
+        app:layout_constraintTop_toBottomOf="@id/weatherImage"
+        android:layout_marginTop="8dp"/>
+
+    <!-- Current Temperature -->
+    <TextView
+        android:id="@+id/temp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="29°"
+        android:textColor="@color/white"
+        android:textSize="56sp"
+        android:textStyle="bold"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"/>
+
+    <!-- High / Low -->
+    <TextView
+        android:id="@+id/highLowTemp"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="High: 32°  Low: 27°"
+        android:textColor="#E7FFFC"
+        android:textStyle="bold"
+        android:textSize="16sp"
+        android:layout_marginTop="8dp"
+        app:layout_constraintStart_toStartOf="@id/temp"
+        app:layout_constraintTop_toBottomOf="@id/temp"/>
+
+    <!-- Location -->
+    <TextView
+        android:id="@+id/address"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Phagwara, Punjab"
+        android:textColor="@color/white"
+        android:textSize="20sp"
+        android:textStyle="bold"
+        android:layout_marginTop="12dp"
+        android:gravity="start"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintEnd_toStartOf="@id/weatherImage"
+        app:layout_constraintTop_toBottomOf="@id/highLowTemp"/>
 
 </androidx.constraintlayout.widget.ConstraintLayout>

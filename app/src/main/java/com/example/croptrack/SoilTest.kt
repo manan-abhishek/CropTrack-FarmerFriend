@@ -21,7 +21,7 @@ class SoilTest : Fragment() {
         soilTest.setOnClickListener {
             val soilData = SoilData()
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, soilData)
+                .replace(R.id.fragment, soilData)
                 .addToBackStack(null)
                 .commit()
         }
@@ -29,7 +29,7 @@ class SoilTest : Fragment() {
         soilReport.setOnClickListener {
             val soilReportFragment = SoilReport()
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, soilReportFragment)
+                .replace(R.id.fragment, soilReportFragment)
                 .addToBackStack(null)
                 .commit()
         }

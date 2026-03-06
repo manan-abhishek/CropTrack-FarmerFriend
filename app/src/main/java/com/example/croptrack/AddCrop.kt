@@ -61,7 +61,7 @@ class AddCrop : Fragment() {
                     }
 
                     parentFragmentManager.beginTransaction()
-                        .replace(R.id.viewPager, locationFrag)
+                        .replace(R.id.fragment, locationFrag)
                         .addToBackStack(null)
                         .commit()
                 }

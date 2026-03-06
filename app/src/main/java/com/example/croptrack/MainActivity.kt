@@ -6,6 +6,8 @@ import android.graphics.Color
 import android.graphics.PorterDuff
 import android.graphics.drawable.GradientDrawable
 import android.os.Bundle
+import android.view.View
+import android.widget.FrameLayout
 import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
@@ -98,9 +100,21 @@ class MainActivity : AppCompatActivity() {
         notification.setOnClickListener {
             val notifyFrag = Notifications()
             supportFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, notifyFrag)
+                .replace(R.id.fragment, notifyFrag)
                 .addToBackStack("Home")
                 .commit()
+
+        }
+
+        val fragmentContainer: FrameLayout = findViewById(R.id.fragment)
+        supportFragmentManager.addOnBackStackChangedListener {
+            if (supportFragmentManager.backStackEntryCount > 0) {
+                viewPager.visibility = View.GONE
+                fragmentContainer.visibility = View.VISIBLE
+            } else {
+                fragmentContainer.visibility = View.GONE
+                viewPager.visibility = View.VISIBLE
+            }
         }
 
         openImg = homeIcon

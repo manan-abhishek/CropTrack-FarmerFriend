@@ -48,25 +48,28 @@ class Home : Fragment() {
 
         weatherCard.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, Climate())
+                .replace(R.id.fragment, Climate())
                 .addToBackStack(null)
                 .commit()
         }
+
         card1.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, AddCrop())
+                .replace(R.id.fragment, AddCrop())
                 .addToBackStack(null)
                 .commit()
         }
+
         card2.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, CropProgress_1())
+                .replace(R.id.fragment, CropProgress_1())
                 .addToBackStack(null)
                 .commit()
         }
+
         card3.setOnClickListener {
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, SoilTest())
+                .replace(R.id.fragment, SoilTest())
                 .addToBackStack(null)
                 .commit()
         }
@@ -85,7 +88,7 @@ class Home : Fragment() {
                     cropFragment.arguments = bundle
 
                     parentFragmentManager.beginTransaction()
-                        .replace(R.id.viewPager, cropFragment)
+                        .replace(R.id.fragment, cropFragment)
                         .addToBackStack("Home")
                         .commit()
                 }
@@ -117,7 +120,7 @@ class Home : Fragment() {
     private fun openGovtYojnaFragment() {
         val fragment = GovtYojna()
         val transaction = parentFragmentManager.beginTransaction()
-        transaction.replace(R.id.viewPager, fragment)
+        transaction.replace(R.id.fragment, fragment)
         transaction.addToBackStack(null)
         transaction.commit()
     }

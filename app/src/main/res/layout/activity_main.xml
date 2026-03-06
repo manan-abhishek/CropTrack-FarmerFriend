@@ -1,13 +1,14 @@
 <?xml version="1.0" encoding="utf-8"?>
+
 <androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     xmlns:tools="http://schemas.android.com/tools"
     android:id="@+id/main"
-    android:background="#fff"
+    android:background="#ffffff"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
-
+ 
     <!-- Top Toolbar -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/topToolbar"
@@ -15,8 +16,6 @@
         android:layout_height="wrap_content"
         android:background="#4BA26A"
         android:paddingTop="8dp"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintTop_toTopOf="parent">
 
         <ImageView
@@ -25,7 +24,6 @@
             android:layout_height="48dp"
             android:src="@drawable/logo"
             android:layout_margin="12dp"
-            android:layout_marginTop="10dp"
             android:background="@drawable/circle_bg"
             android:padding="6dp"
             android:layout_gravity="start"/>
@@ -35,9 +33,8 @@
             android:layout_width="48dp"
             android:layout_height="48dp"
             android:src="@drawable/user"
-            android:layout_marginTop="10dp"
-            android:background="@drawable/circle_bg"
             android:layout_margin="12dp"
+            android:background="@drawable/circle_bg"
             android:padding="6dp"
             android:layout_gravity="end"/>
 
@@ -52,10 +49,9 @@
         android:background="@drawable/circle_bg"
         android:elevation="8dp"
         android:src="@drawable/baseline_circle_notifications_24"
-        android:tintMode="multiply"
+        app:tint="#4BA26A"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/topToolbar"
-        app:tint="#4BA26A" />
+        app:layout_constraintTop_toBottomOf="@id/topToolbar" />
 
     <TextView
         android:id="@+id/notificationCount"
@@ -74,17 +70,25 @@
         android:layout_marginEnd="-6dp"
         android:visibility="visible"/>
 
+    <!-- ViewPager (Main Screens Only) -->
     <androidx.viewpager2.widget.ViewPager2
         android:id="@+id/viewPager"
         android:layout_width="match_parent"
         android:layout_height="0dp"
         android:layout_marginVertical="6dp"
-        app:layout_constraintBottom_toTopOf="@id/bottomToolbar"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@id/topToolbar"/>
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomToolbar"/>
 
-    <!-- Lang changer-->
+    <!-- Fragment Container for Inner Screens -->
+    <FrameLayout
+        android:id="@+id/fragment"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:visibility="gone"
+        app:layout_constraintTop_toBottomOf="@id/topToolbar"
+        app:layout_constraintBottom_toTopOf="@id/bottomToolbar"/>
+
+    <!-- Language changer -->
     <ImageView
         android:id="@+id/langChanger"
         android:layout_width="36dp"
@@ -93,11 +97,11 @@
         android:background="@drawable/circle_bg"
         android:elevation="8dp"
         android:src="@drawable/lang_changer"
-        android:tintMode="multiply"
+        app:tint="#4BA26A"
         app:layout_constraintBottom_toTopOf="@id/bottomToolbar"
-        app:layout_constraintEnd_toEndOf="@+id/topToolbar"
-        app:tint="#4BA26A" />
+        app:layout_constraintEnd_toEndOf="parent" />
 
+    <!-- Bottom Navigation -->
     <androidx.appcompat.widget.Toolbar
         android:id="@+id/bottomToolbar"
         android:layout_width="match_parent"
@@ -129,13 +133,12 @@
 
                 <TextView
                     android:id="@+id/home"
+                    android:text="Home"
                     android:layout_height="wrap_content"
                     android:layout_width="wrap_content"
-                    android:text="Home"
                     android:textSize="15sp"
                     android:textColor="@android:color/white"/>
             </LinearLayout>
-
 
             <!-- Weather -->
             <LinearLayout
@@ -162,7 +165,6 @@
                     android:textColor="@android:color/white"/>
             </LinearLayout>
 
-
             <!-- Detect -->
             <LinearLayout
                 android:id="@+id/btnReel"
@@ -187,7 +189,6 @@
                     android:textSize="15sp"
                     android:textColor="@android:color/white"/>
             </LinearLayout>
-
 
             <!-- Rent -->
             <LinearLayout

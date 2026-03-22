@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.content.SharedPreferences
 import android.os.Bundle

@@ -4,7 +4,7 @@ plugins {
 }
 
 android {
-    namespace = "com.example.croptrack"
+    namespace = "com.croptrack.farmerfriend"
     compileSdk = 35
 // ABHISHEK
     buildFeatures{
@@ -12,7 +12,7 @@ android {
     }
 
     defaultConfig {
-        applicationId = "com.example.croptrack"
+        applicationId = "com.croptrack.farmerfriend"
         minSdk = 26
         targetSdk = 35
         versionCode = 1

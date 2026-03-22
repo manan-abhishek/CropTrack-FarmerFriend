@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 data class WeatherApp(
     val base: String,

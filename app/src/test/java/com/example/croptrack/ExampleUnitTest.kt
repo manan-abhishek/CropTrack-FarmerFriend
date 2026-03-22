@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import org.junit.Test
 

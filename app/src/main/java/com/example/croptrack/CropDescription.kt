@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.app.NotificationChannel
 import android.app.NotificationManager

@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.content.Context
 import android.content.Intent
@@ -12,8 +12,8 @@ import android.view.ViewGroup
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
-import com.example.croptrack.R
-import com.example.croptrack.Signup
+import com.croptrack.farmerfriend.R
+import com.croptrack.farmerfriend.Signup
 import com.google.android.material.button.MaterialButton
 import com.google.android.material.textfield.TextInputLayout
 

@@ -17,7 +17,7 @@ import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
 import androidx.core.content.ContentProviderCompat.requireContext
 import androidx.fragment.app.Fragment
-import com.example.croptrack.R
+import com.croptrack.farmerfriend.R
 import com.github.drjacky.imagepicker.ImagePicker
 import kotlin.math.pow
 

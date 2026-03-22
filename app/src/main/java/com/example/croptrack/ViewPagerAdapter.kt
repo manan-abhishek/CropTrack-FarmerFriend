@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import androidx.fragment.app.Fragment
 import androidx.fragment.app.FragmentActivity

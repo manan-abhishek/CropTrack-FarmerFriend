@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.annotation.SuppressLint
 import android.os.Bundle
@@ -9,7 +9,7 @@ import android.view.ViewGroup
 import android.widget.SearchView
 import android.widget.Toast
 import androidx.fragment.app.Fragment
-import com.example.croptrack.databinding.FragmentClimateBinding
+import com.croptrack.farmerfriend.databinding.FragmentClimateBinding
 import retrofit2.Call
 import retrofit2.Callback
 import retrofit2.Response

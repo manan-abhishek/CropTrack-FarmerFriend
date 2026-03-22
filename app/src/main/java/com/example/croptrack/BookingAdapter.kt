@@ -1,11 +1,11 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.content.Context
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import android.widget.*
-import com.example.croptrack.MyBookingsActivity.Booking
+import com.croptrack.farmerfriend.MyBookingsActivity.Booking
 
 class BookingAdapter(private val context: Context, private val bookings: List<Booking>) : BaseAdapter() {
 

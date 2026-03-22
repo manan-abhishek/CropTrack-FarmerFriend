@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import CropImage
 import android.app.Activity
@@ -15,10 +15,10 @@ import android.widget.LinearLayout
 import android.widget.Toast
 import androidx.activity.result.ActivityResultLauncher
 import androidx.activity.result.contract.ActivityResultContracts
-import com.example.croptrack.AddCrop
-import com.example.croptrack.Climate
-import com.example.croptrack.R
-import com.example.croptrack.SoilTest
+import com.croptrack.farmerfriend.AddCrop
+import com.croptrack.farmerfriend.Climate
+import com.croptrack.farmerfriend.R
+import com.croptrack.farmerfriend.SoilTest
 import com.github.drjacky.imagepicker.ImagePicker
 import java.net.URI
 

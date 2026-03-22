@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.app.DatePickerDialog
 import android.graphics.Color

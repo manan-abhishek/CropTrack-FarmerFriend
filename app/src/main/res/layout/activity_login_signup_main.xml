@@ -62,7 +62,7 @@
 
             <androidx.fragment.app.FragmentContainerView
                 android:id="@+id/loginSignup"
-                android:name="com.example.croptrack.Login"
+                android:name="com.croptrack.farmerfriend.Login"
                 android:layout_width="match_parent"
                 android:layout_height="match_parent"
                 android:layout_margin="6dp"

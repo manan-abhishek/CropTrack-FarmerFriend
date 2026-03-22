@@ -1,4 +1,4 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import retrofit2.http.GET
 import retrofit2.http.Query

@@ -1,11 +1,11 @@
-package com.example.croptrack
+package com.croptrack.farmerfriend
 
 import android.content.Intent
 import android.os.Bundle
 import android.widget.Button
 import android.widget.LinearLayout
 import androidx.appcompat.app.AppCompatActivity
-import com.example.croptrack.R
+import com.croptrack.farmerfriend.R
 
 
 class Rent : AppCompatActivity() {

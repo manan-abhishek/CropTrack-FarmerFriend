@@ -30,12 +30,6 @@
         android:theme="@style/Theme.CropTrack"
         tools:targetApi="33">
         <activity
-            android:name=".BookingAdapter"
-            android:exported="false" />
-        <activity
-            android:name=".BookingStorage"
-            android:exported="false" />
-        <activity
             android:name=".Rent"
             android:exported="false" />
         <activity

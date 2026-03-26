@@ -257,7 +257,7 @@ class CropDescription : Fragment() {
 
             val addedCrop = CropProgress_1()
             parentFragmentManager.beginTransaction()
-                .replace(R.id.viewPager, addedCrop)
+                .replace(R.id.fragment, addedCrop)
                 .addToBackStack("Home")
                 .commit()
         }

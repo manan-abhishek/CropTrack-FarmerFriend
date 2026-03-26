@@ -77,7 +77,7 @@ class ChooseCropLocation : Fragment() {
                 }
 
                 parentFragmentManager.beginTransaction()
-                    .replace(R.id.viewPager, description)
+                    .replace(R.id.fragment, description)
                     .addToBackStack(null)
                     .commit()
             } else {

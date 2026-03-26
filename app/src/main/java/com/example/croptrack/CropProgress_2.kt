@@ -1,8 +1,8 @@
 package com.croptrack.farmerfriend
 
+import android.content.Context
 import android.content.SharedPreferences
 import android.os.Bundle
-import android.preference.PreferenceManager
 import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
@@ -27,10 +27,11 @@ class CropProgress_2 : Fragment(), SharedPreferences.OnSharedPreferenceChangeLis
         val view = inflater.inflate(R.layout.fragment_crop_progress_2, container, false)
 
         // Initialize SharedPreferences before using it
-        sharedPreferences = PreferenceManager.getDefaultSharedPreferences(requireContext())
+        sharedPreferences = requireContext().getSharedPreferences("added_crops", Context.MODE_PRIVATE)
 
         // Get data from arguments
-        val id1 = arguments?.getInt("id")
+        val idStr = arguments?.getString("id")
+        val id1 = idStr?.toIntOrNull()
         val cropName = arguments?.getString("cropName")
         val cropArea = arguments?.getString("cropArea")
         val cropLocation = arguments?.getString("cropLocation")
@@ -56,10 +57,10 @@ class CropProgress_2 : Fragment(), SharedPreferences.OnSharedPreferenceChangeLis
         dateText.text = "Start Date: ${cropDate}"
 
         // Determine progress:
-        val storedCropData = sharedPreferences.getString(id1.toString(), null)
+        val storedCropData = if (id1 != null) sharedPreferences.getString(id1.toString(), null) else null
         val pg: Float = if (storedCropData != null) {
             val parts = storedCropData.split(',')
-            if (parts.size == 5) {
+            if (parts.size >= 4) {
                 parts[3].toFloatOrNull() ?: 0.0f
             } else {
                 0.0f
@@ -97,7 +98,7 @@ class CropProgress_2 : Fragment(), SharedPreferences.OnSharedPreferenceChangeLis
         if (key == idKey) {
             val cropData = sharedPreferences.getString(idKey, null) ?: return
             val parts = cropData.split(',')
-            if (parts.size == 5) {
+            if (parts.size >= 4) {
                 val pg = parts[3].toFloatOrNull() ?: 0.0f
                 activity?.runOnUiThread {
                     progressBar.progress = pg.toInt()
